@@ -35,7 +35,7 @@ public class Barcode extends Component {
     private JButton doAGridButton;
     private JButton combine;
 
-    final JFileChooser  fc = new JFileChooser("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/");
+    final JFileChooser  fc = new JFileChooser("C:/Users/Dave Sitex/Desktop/Approved BMPs/");
 
     final int period = new Color(255, 255, 255).getRGB();
     final int A = new Color(0, 0, 0).getRGB();
@@ -69,12 +69,12 @@ public class Barcode extends Component {
     final int o = new Color(213, 199, 186).getRGB();
     final int w = new Color(249, 218, 224).getRGB();
     final int z = new Color(112, 255, 112).getRGB();
-    final int smalle = new Color(144, 136, 144).getRGB();
+    final int smalle = new Color(235, 254, 1).getRGB();
     final int smallk = new Color(194, 148, 113).getRGB();
     final int l = new Color(108, 23, 50).getRGB();
     final int m = new Color(228, 228, 228).getRGB();
     final int p = new Color(81, 43, 28).getRGB();
-    final int q = new Color(29, 61, 109).getRGB();
+    final int q = new Color(41, 86, 154).getRGB();
     boolean validFlag = true;
     boolean is8Color = false;
     boolean is7Color = false;
@@ -130,7 +130,7 @@ public class Barcode extends Component {
 
 
 
-                        String filename = "C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/currentBMP.bmp";
+                        String filename = "C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/currentBMP.bmp";
                         File outputfile = new File(filename);
                         try {
                             ImageIO.write(image, "bmp", outputfile);
@@ -186,7 +186,7 @@ public class Barcode extends Component {
 
                 BufferedImage image = null;
                 try {
-                    image = ImageIO.read(new File("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/currentBMP.bmp"));
+                    image = ImageIO.read(new File("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/currentBMP.bmp"));
                 } catch (IOException e1) {
                     e1.printStackTrace();
                 }
@@ -391,7 +391,7 @@ public class Barcode extends Component {
                     }
                 }
 
-                String filename = "C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/currentBMP.bmp";
+                String filename = "C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/currentBMP.bmp";
                 File outputfile = new File(filename);
                 try {
                     ImageIO.write(image, "bmp", outputfile);
@@ -404,7 +404,7 @@ public class Barcode extends Component {
 
                 image = null;
                 try {
-                    image = ImageIO.read(new File("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/currentBMP.bmp"));
+                    image = ImageIO.read(new File("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/currentBMP.bmp"));
                 } catch (IOException e1) {
                     e1.printStackTrace();
                 }
@@ -549,7 +549,7 @@ public class Barcode extends Component {
                 BufferedImage finalImage = new BufferedImage(biggerImg.getWidth(),
                         biggerImg.getHeight(), BufferedImage.TYPE_INT_RGB);
                 finalImage.createGraphics().drawImage(biggerImg, 0, 0, Color.WHITE, null);
-                filename = "C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/barcoded.bmp";
+                filename = "C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/barcoded.bmp";
                 outputfile = new File(filename);
                 try {
                     ImageIO.write(finalImage, "bmp", outputfile);
@@ -562,7 +562,7 @@ public class Barcode extends Component {
 
                 image = null;
                 try {
-                    image = ImageIO.read(new File("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/barcoded.bmp"));
+                    image = ImageIO.read(new File("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/barcoded.bmp"));
                 } catch (IOException e1) {
                     e1.printStackTrace();
                 }
@@ -616,7 +616,7 @@ public class Barcode extends Component {
 
                 image.setRGB(0,h-1,X);
 
-                filename = "C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Birdseye.bmp";
+                filename = "C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Birdseye.bmp";
                 outputfile = new File(filename);
                 try {
                     ImageIO.write(image, "bmp", outputfile);
@@ -644,7 +644,7 @@ public class Barcode extends Component {
                         file = fc.getSelectedFile();
                     }
                     String inputName = JOptionPane.showInputDialog(null,"Name your file.");
-                    String filename = "C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/"+inputName+".txt";
+                    String filename = "C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/"+inputName+".txt";
                     File sintralNew = new File(filename);
                     FileReader fileReader = null;
                     FileReader templateReader = null;
@@ -668,48 +668,48 @@ public class Barcode extends Component {
                     carriers.add("8");
                     try {
 
-                        String threeColorA = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(21);
-                        String threeColorB = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(22);
-                        String threeColorAtc = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(24);
-                        String threeColorBtc = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(25);
-                        String fourColorA = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(28);
-                        String fourColorB = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(29);
-                        String fiveColorA = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(32);
-                        String fiveColorB = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(33);
-                        String fiveColorC = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(34);
-                        String fiveColorD = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(35);
-                        String fiveColorE = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(36);
-                        String fiveColorF = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(37);
-                        String fiveColorAtc = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(40);
-                        String fiveColorBtc = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(41);
-                        String sixColorA = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(44);
-                        String sixColorB = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(45);
-                        String sixColorC = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(46);
-                        String sixColorD = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(47);
-                        String sixColorE = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(48);
-                        String sixColorF = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(49);
-                        String sixColorAtc = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(52);
-                        String sixColorBtc = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(53);
-                        String sevenColorA = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(56);
-                        String sevenColorB = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(57);
-                        String sevenColorC = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(58);
-                        String sevenColorD = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(59);
-                        String sevenColorE = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(60);
-                        String sevenColorF = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(61);
-                        String eightColorA = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(64);
-                        String eightColorB = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(65);
-                        String eightColorC = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(66);
-                        String eightColorD = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(67);
-                        String eightColorE = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(68);
-                        String eightColorF = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(69);
+                        String threeColorA = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(21);
+                        String threeColorB = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(22);
+                        String threeColorAtc = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(24);
+                        String threeColorBtc = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(25);
+                        String fourColorA = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(28);
+                        String fourColorB = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(29);
+                        String fiveColorA = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(32);
+                        String fiveColorB = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(33);
+                        String fiveColorC = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(34);
+                        String fiveColorD = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(35);
+                        String fiveColorE = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(36);
+                        String fiveColorF = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(37);
+                        String fiveColorAtc = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(40);
+                        String fiveColorBtc = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(41);
+                        String sixColorA = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(44);
+                        String sixColorB = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(45);
+                        String sixColorC = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(46);
+                        String sixColorD = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(47);
+                        String sixColorE = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(48);
+                        String sixColorF = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(49);
+                        String sixColorAtc = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(52);
+                        String sixColorBtc = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(53);
+                        String sevenColorA = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(56);
+                        String sevenColorB = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(57);
+                        String sevenColorC = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(58);
+                        String sevenColorD = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(59);
+                        String sevenColorE = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(60);
+                        String sevenColorF = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(61);
+                        String eightColorA = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(64);
+                        String eightColorB = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(65);
+                        String eightColorC = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(66);
+                        String eightColorD = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(67);
+                        String eightColorE = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(68);
+                        String eightColorF = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(69);
                       //  System.out.println(eightColorA);
-                        String tcPersA = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(160);
-                        String tcPersB = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(161);
+                        String tcPersA = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(160);
+                        String tcPersB = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(161);
 
-                        String JA2Reps = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(151);
+                        String JA2Reps = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(151);
 
                         fileReader = new FileReader(file);
-                   //     templateReader = new FileReader("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt");
+                   //     templateReader = new FileReader("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt");
                         BufferedReader bufferedReader = new BufferedReader(fileReader);
                         StringBuffer stringBuffer = new StringBuffer();
                         String line;
@@ -726,17 +726,17 @@ public class Barcode extends Component {
                         FileWriter writer = new FileWriter(sintralNew,true);
 
                         for(int templateLine = 0;templateLine<19;templateLine++){
-                            String currentTemplateLine = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(templateLine);
+                            String currentTemplateLine = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(templateLine);
                             writer.write(currentTemplateLine);
                             writer.write(System.getProperty( "line.separator" ));
                         }
-                        writer.write(Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(164));
+                        writer.write(Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(164));
                         writer.write(System.getProperty( "line.separator" ));
-                        writer.write(Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(165));
+                        writer.write(Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(165));
                         writer.write(System.getProperty( "line.separator" ));
-                        writer.write(Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(164));
+                        writer.write(Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(164));
                         writer.write(System.getProperty( "line.separator" ));
-                        writer.write(Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(165));
+                        writer.write(Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(165));
                         writer.write(System.getProperty( "line.separator" ));
                         writer.flush();
                         writer.close();
@@ -1354,7 +1354,7 @@ public class Barcode extends Component {
                                        // writer.write(pers1.toString());
                                         for(int templateLine = 70;templateLine<97;templateLine++){
                                             writer = new FileWriter(sintralNew,true);
-                                            String currentTemplateLine = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(templateLine);
+                                            String currentTemplateLine = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(templateLine);
                                             writer.write(currentTemplateLine);
                                             writer.write(System.getProperty( "line.separator" ));
                                             writer.flush();
@@ -1387,7 +1387,7 @@ public class Barcode extends Component {
                                      //   writer.write(pers1.toString());
                                         for(int templateLine = 97;templateLine<124;templateLine++){
                                             writer = new FileWriter(sintralNew,true);
-                                            String currentTemplateLine = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(templateLine);
+                                            String currentTemplateLine = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(templateLine);
                                             writer.write(currentTemplateLine);
                                             writer.write(System.getProperty( "line.separator" ));
                                             writer.flush();
@@ -1419,7 +1419,7 @@ public class Barcode extends Component {
                                         }
                                         for(int templateLine = 124;templateLine<151;templateLine++){
                                             writer = new FileWriter(sintralNew,true);
-                                            String currentTemplateLine = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(templateLine);
+                                            String currentTemplateLine = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(templateLine);
                                             writer.write(currentTemplateLine);
                                             writer.write(System.getProperty( "line.separator" ));
                                             writer.flush();
@@ -1464,9 +1464,9 @@ public class Barcode extends Component {
                                             // String repeatString = "REP*"+String.valueOf(repeats/2)+"\n";
                                             writer = new FileWriter(sintralNew, true);
                                             writer.write(System.lineSeparator());
-                                            writer.write(Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(152));
+                                            writer.write(Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(152));
                                             writer.write(System.lineSeparator());
-                                            writer.write(Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(153));
+                                            writer.write(Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(153));
                                             writer.write(System.lineSeparator());
                                             writer.write(tcPersA);
                                             writer.write(System.lineSeparator());
@@ -1489,9 +1489,9 @@ public class Barcode extends Component {
                                        // String repeatString = "REP*"+String.valueOf(repeats/2)+"\n";
                                         writer = new FileWriter(sintralNew,true);
                                         writer.write(System.lineSeparator());
-                                        writer.write(Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(156));
+                                        writer.write(Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(156));
                                         writer.write(System.lineSeparator());
-                                        writer.write(Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(157));
+                                        writer.write(Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(157));
                                         writer.write(System.lineSeparator());
                                         writer.write("REPEND");
                                         writer.write(System.lineSeparator());
@@ -1577,7 +1577,7 @@ public class Barcode extends Component {
                                 writer.write(System.getProperty("line.separator"));
                             }
                             else {
-                                String currentTemplateLine = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(templateLine);
+                                String currentTemplateLine = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/template1.txt")).get(templateLine);
                                 writer.write(currentTemplateLine);
                                 writer.write(System.getProperty("line.separator"));
                             }
@@ -1616,9 +1616,9 @@ public class Barcode extends Component {
                         file = fc.getSelectedFile();
                     }
                     String inputName = JOptionPane.showInputDialog(null, "Name your file.");
-                    String filenameTC = "C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/" + inputName + "TC.txt";
-                    String filenameTC2X = "C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/" + inputName + "TC2X.txt";
-                    String filename440 = "C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/" + inputName + "440.txt";
+                    String filenameTC = "C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/" + inputName + "TC.txt";
+                    String filenameTC2X = "C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/" + inputName + "TC2X.txt";
+                    String filename440 = "C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/" + inputName + "440.txt";
                     File sintralNewTC = new File(filenameTC);
                     File sintralNewTC2X = new File(filenameTC2X);
                     File sintralNew440 = new File(filename440);
@@ -1653,48 +1653,48 @@ public class Barcode extends Component {
                     carriers.add("8");
                     try {
 
-                        String threeColorA = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(21);
-                        String threeColorB = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(22);
-                        String threeColorAtc = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(24);
-                        String threeColorBtc = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(25);
-                        String fourColorA = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(28);
-                        String fourColorB = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(29);
-                        String fiveColorA = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(32);
-                        String fiveColorB = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(33);
-                        String fiveColorC = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(34);
-                        String fiveColorD = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(35);
-                        String fiveColorE = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(36);
-                        String fiveColorF = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(37);
-                        String fiveColorAtc = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(40);
-                        String fiveColorBtc = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(41);
-                        String sixColorA = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(44);
-                        String sixColorB = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(45);
-                        String sixColorC = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(46);
-                        String sixColorD = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(47);
-                        String sixColorE = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(48);
-                        String sixColorF = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(49);
-                        String sixColorAtc = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(52);
-                        String sixColorBtc = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(53);
-                        String sevenColorA = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(56);
-                        String sevenColorB = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(57);
-                        String sevenColorC = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(58);
-                        String sevenColorD = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(59);
-                        String sevenColorE = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(60);
-                        String sevenColorF = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(61);
-                        String eightColorA = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(64);
-                        String eightColorB = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(65);
-                        String eightColorC = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(66);
-                        String eightColorD = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(67);
-                        String eightColorE = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(68);
-                        String eightColorF = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(69);
+                        String threeColorA = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(21);
+                        String threeColorB = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(22);
+                        String threeColorAtc = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(24);
+                        String threeColorBtc = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(25);
+                        String fourColorA = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(28);
+                        String fourColorB = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(29);
+                        String fiveColorA = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(32);
+                        String fiveColorB = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(33);
+                        String fiveColorC = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(34);
+                        String fiveColorD = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(35);
+                        String fiveColorE = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(36);
+                        String fiveColorF = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(37);
+                        String fiveColorAtc = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(40);
+                        String fiveColorBtc = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(41);
+                        String sixColorA = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(44);
+                        String sixColorB = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(45);
+                        String sixColorC = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(46);
+                        String sixColorD = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(47);
+                        String sixColorE = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(48);
+                        String sixColorF = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(49);
+                        String sixColorAtc = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(52);
+                        String sixColorBtc = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(53);
+                        String sevenColorA = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(56);
+                        String sevenColorB = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(57);
+                        String sevenColorC = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(58);
+                        String sevenColorD = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(59);
+                        String sevenColorE = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(60);
+                        String sevenColorF = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(61);
+                        String eightColorA = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(64);
+                        String eightColorB = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(65);
+                        String eightColorC = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(66);
+                        String eightColorD = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(67);
+                        String eightColorE = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(68);
+                        String eightColorF = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(69);
                         //  System.out.println(eightColorA);
-                        String tcPersA = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(160);
-                        String tcPersB = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(161);
+                        String tcPersA = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(160);
+                        String tcPersB = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(161);
 
-                        String JA2Reps = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(151);
+                        String JA2Reps = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(151);
 
                         fileReader = new FileReader(file);
-                        //     templateReader = new FileReader("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt");
+                        //     templateReader = new FileReader("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt");
                         BufferedReader bufferedReader = new BufferedReader(fileReader);
                         StringBuffer stringBuffer = new StringBuffer();
                         String line;
@@ -1713,7 +1713,7 @@ public class Barcode extends Component {
                         FileWriter writer440 = new FileWriter(sintralNew440, true);
 
                         for (int templateLine = 0; templateLine < 19; templateLine++) {
-                            String currentTemplateLine = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(templateLine);
+                            String currentTemplateLine = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(templateLine);
                             writerTC.write(currentTemplateLine);
                             writerTC.write(System.getProperty("line.separator"));
                             writerTC2X.write(currentTemplateLine);
@@ -1722,21 +1722,21 @@ public class Barcode extends Component {
                             writer440.write(System.getProperty("line.separator"));
                         }
 
-                        writerTC.write(Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(164));
+                        writerTC.write(Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(164));
                         writerTC.write(System.getProperty("line.separator"));
-                        writerTC.write(Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(165));
+                        writerTC.write(Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(165));
                         writerTC.write(System.getProperty("line.separator"));
                         writerTC.flush();
                         writerTC.close();
-                        writerTC2X.write(Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(164));
+                        writerTC2X.write(Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(164));
                         writerTC2X.write(System.getProperty("line.separator"));
-                        writerTC2X.write(Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(165));
+                        writerTC2X.write(Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(165));
                         writerTC2X.write(System.getProperty("line.separator"));
                         writerTC2X.flush();
                         writerTC2X.close();
-                        writer440.write(Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(164));
+                        writer440.write(Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(164));
                         writer440.write(System.getProperty("line.separator"));
-                        writer440.write(Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(165));
+                        writer440.write(Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(165));
                         writer440.write(System.getProperty("line.separator"));
                         writer440.flush();
                         writer440.close();
@@ -2763,7 +2763,7 @@ public class Barcode extends Component {
                                         writerTC = new FileWriter(sintralNewTC, true);
                                         writerTC2X = new FileWriter(sintralNewTC2X, true);
                                         writer440 = new FileWriter(sintralNew440, true);
-                                        String currentTemplateLine = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(templateLine);
+                                        String currentTemplateLine = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(templateLine);
                                         writerTC.write(currentTemplateLine);
                                         writerTC.write(System.getProperty("line.separator"));
                                         writerTC.flush();
@@ -2812,9 +2812,9 @@ public class Barcode extends Component {
                                     writerTC2X.close();
 
                                     writerTC.write(System.lineSeparator());
-                                    writerTC.write(Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(152));
+                                    writerTC.write(Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(152));
                                     writerTC.write(System.lineSeparator());
-                                    writerTC.write(Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(153));
+                                    writerTC.write(Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(153));
                                     writerTC.write(System.lineSeparator());
                                     writerTC.write("REPEND");
                                     writerTC.write(System.lineSeparator());
@@ -2824,9 +2824,9 @@ public class Barcode extends Component {
                                     writerTC.close();
 
                                     writer440.write(System.lineSeparator());
-                                    writer440.write(Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(152));
+                                    writer440.write(Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(152));
                                     writer440.write(System.lineSeparator());
-                                    writer440.write(Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(153));
+                                    writer440.write(Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(153));
                                     writer440.write(System.lineSeparator());
                                     writer440.write("REPEND");
                                     writer440.write(System.lineSeparator());
@@ -2856,7 +2856,7 @@ public class Barcode extends Component {
                                 writer440.write(" 945    YG:8/12345678;");
                                 writer440.write(System.getProperty("line.separator"));
                             } else {
-                                String currentTemplateLine = Files.readAllLines(Paths.get("C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(templateLine);
+                                String currentTemplateLine = Files.readAllLines(Paths.get("C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/Custom Sintrals/Templates/templateBirdseye.txt")).get(templateLine);
                                 writerTC.write(currentTemplateLine);
                                 writerTC.write(System.getProperty("line.separator"));
                                 writerTC2X.write(currentTemplateLine);
@@ -3349,7 +3349,7 @@ public class Barcode extends Component {
                                 biggerImg.getHeight(), BufferedImage.TYPE_INT_RGB);
                         finalImage.createGraphics().drawImage(biggerImg, 0, 0, Color.WHITE, null);
 
-                        String filename = "C:/Users/Sitex.9.10.20.B/Desktop/Approved BMPs/Barcodes/GridDone.bmp";
+                        String filename = "C:/Users/Dave Sitex/Desktop/Approved BMPs/Barcodes/GridDone.bmp";
                         File outputfile = new File(filename);
                         try {
                             ImageIO.write(finalImage, "bmp", outputfile);
